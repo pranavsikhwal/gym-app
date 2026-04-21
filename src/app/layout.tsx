@@ -1,3 +1,4 @@
+import { ThemeProvider } from "@/components/theme-provider";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Inter } from "next/font/google";
 import "./globals.css";
@@ -29,6 +30,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
+      suppressHydrationWarning
       className={cn(
         "h-full",
         "antialiased",
@@ -38,12 +40,18 @@ export default function RootLayout({
         inter.variable,
       )}
     >
-      {" "}
-      <Header />
       <body className="bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-muted via-background to-background">
-        {children}
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <Header />
+          {children}
+          <Footer className="min-h-screen w-full place-content-end pt-10 " />
+        </ThemeProvider>
       </body>
-      <Footer min-h-screen w-full place-content-end pt-10 />
     </html>
   );
 }

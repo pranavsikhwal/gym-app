@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 const navLinks = [
   { href: "/", label: "Features" },
   { href: "/AboutUs", label: "About Us" },
-  { href: "#", label: "Contact Us" },
+  { href: "/ContactUs", label: "Contact Us" },
 ];
 
 const socialLinks = [
@@ -22,8 +22,8 @@ const socialLinks = [
 
 export function Footer() {
   return (
-    <div className="bg-muted">
-      <footer className=" mx-auto w-full max-w-5xl *:px-4 *:md:px-6  ">
+    <div className="border-t bg-muted/100 backdrop-blur-sm">
+      <footer className="  mx-auto w-full max-w-5xl *:px-4 *:md:px-6  ">
         <div className="flex flex-col gap-6 py-6">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">

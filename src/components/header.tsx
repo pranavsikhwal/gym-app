@@ -5,6 +5,7 @@ import { useScroll } from "@/components/hooks/use-scroll";
 import { Button } from "@/components/ui/button";
 import { MobileNav } from "@/components/mobile-nav";
 import Link from "next/link";
+import { ModeToggle } from "./toggle";
 
 export function Header() {
   const scrolled = useScroll(10);
@@ -39,6 +40,7 @@ export function Header() {
             KASRAT
           </span>
         </div>
+        <ModeToggle />
         <div className="hidden items-center gap-8 md:flex">
           <div>
             <Button variant={"secondary"} asChild>
@@ -47,7 +49,7 @@ export function Header() {
           </div>
 
           <Button size="sm" asChild>
-            <Link href="#">Contact Us </Link>
+            <Link href="/ContactUs">Contact Us </Link>
           </Button>
         </div>
         <MobileNav />
