@@ -40,7 +40,7 @@ export default function RootLayout({
     >
       {" "}
       <Header />
-      <body className="absolute inset-0 bg-gradient-to-b from-slate-680/90 to-black/30  min-h-full flex flex-col">
+      <body className="bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-muted via-background to-background">
         {children}
       </body>
       <Footer min-h-screen w-full place-content-end pt-10 />

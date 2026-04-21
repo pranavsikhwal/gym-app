@@ -1,6 +1,5 @@
 import { ArrowRightIcon } from "lucide-react";
 import Link from "next/link";
-import heroBg from "./hero-image.jpg";
 
 import { Button } from "@/components/ui/button";
 
@@ -32,7 +31,7 @@ export default function HeroSection() {
                 className="font-semibold"
                 asChild
               >
-                <Link href="#">
+                <Link href="/AboutUs">
                   Learn more <ArrowRightIcon />
                 </Link>
               </Button>

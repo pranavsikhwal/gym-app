@@ -4,6 +4,7 @@ import { Logo, LogoIcon } from "@/components/logo";
 import { useScroll } from "@/components/hooks/use-scroll";
 import { Button } from "@/components/ui/button";
 import { MobileNav } from "@/components/mobile-nav";
+import Link from "next/link";
 
 export function Header() {
   const scrolled = useScroll(10);
@@ -29,7 +30,7 @@ export function Header() {
         <div className="md:flex">
           <a
             className="rounded-md p-2 hover:bg-muted dark:hover:bg-muted/50"
-            href="#"
+            href={"/"}
           >
             <Logo className="h-6 w-auto hidden md:block" />
             <LogoIcon className="h-8 w-8 block md:hidden" />
@@ -40,10 +41,14 @@ export function Header() {
         </div>
         <div className="hidden items-center gap-8 md:flex">
           <div>
-            <Button variant={"secondary"}>About Us</Button>
+            <Button variant={"secondary"} asChild>
+              <Link href={"/AboutUs"}>About Us</Link>
+            </Button>
           </div>
 
-          <Button size="sm">Contact Us</Button>
+          <Button size="sm" asChild>
+            <Link href="#">Contact Us </Link>
+          </Button>
         </div>
         <MobileNav />
       </nav>
