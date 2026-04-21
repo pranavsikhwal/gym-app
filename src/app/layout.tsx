@@ -49,7 +49,7 @@ export default function RootLayout({
         >
           <Header />
           {children}
-          <Footer className="min-h-screen w-full place-content-end pt-10 " />
+          <Footer />
         </ThemeProvider>
       </body>
     </html>
