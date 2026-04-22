@@ -3,7 +3,7 @@ import React from "react";
 import { Portal, PortalBackdrop } from "@/components/ui/portal";
 import { Button } from "@/components/ui/button";
 import { XIcon, MenuIcon } from "lucide-react";
-
+import Link from "next/link";
 export function MobileNav() {
   const [open, setOpen] = React.useState(false);
 
@@ -35,10 +35,12 @@ export function MobileNav() {
             data-slot={open ? "open" : "closed"}
           >
             <div className="mt-12 flex flex-col gap-2">
-              <Button className="w-full" variant="outline">
-                About Us
+              <Button className="w-full" variant="outline " asChild>
+                <Link href="/AboutUs">About Us</Link>
               </Button>
-              <Button className="w-full">Contact Us</Button>
+              <Button className="w-full" asChild>
+                <Link href={"/ContactUs"}>Contact Us</Link>
+              </Button>
             </div>
           </div>
         </Portal>

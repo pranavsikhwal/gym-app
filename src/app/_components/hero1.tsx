@@ -23,7 +23,7 @@ export default function HeroSection() {
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-3">
               <Button size="lg" asChild>
-                <Link href="#">Get started</Link>
+                <Link href="/ContactUs">Get started</Link>
               </Button>
               <Button
                 size="lg"
